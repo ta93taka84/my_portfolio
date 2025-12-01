@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/* Reset & Base Styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f4f4f4; color: #333; line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Header */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    z-index: 2;
+    mix-blend-mode: difference;
+}
+.hero-bg-img {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+/* Snap Grid Section */
+.snap-section { padding: 80px 0; }
+.section-title { font-size: 2rem; text-align: center; margin-bottom: 40px; font-weight: 700; }
+.snap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.snap-item {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background: #ddd;
+    opacity: 0; /* 初期状態は非表示 */
+    transform: translateY(50px);
+}
+.snap-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.snap-item:hover img { transform: scale(1.05); }
+.snap-info {
+    position: absolute;
+    bottom: 0; left: 0;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #fff;
+    width: 100%;
+}
+.snap-name { font-weight: bold; font-size: 1.1rem; }
+.snap-area { font-size: 0.9rem; opacity: 0.8; }
+
+/* Footer */
+footer { background: #111; color: #fff; text-align: center; padding: 30px; }
