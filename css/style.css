@@ -73,7 +73,6 @@ img { width: 100%; display: block; }
 .work-card {
     display: block;
     transition: transform 0.4s ease, opacity 0.4s;
-    opacity: 0; /* 初期状態JSで制御 */
 }
 .work-card:hover { transform: translateY(-10px); }
 
