@@ -73,7 +73,7 @@ img { width: 100%; display: block; }
 .work-card {
     display: block;
     transition: transform 0.4s ease, opacity 0.4s;
-    opacity: 0; /* 初期状態JSで制御 */
+    /* opacity: 0; を削除しました */
 }
 .work-card:hover { transform: translateY(-10px); }
 
@@ -110,4 +110,5 @@ img { width: 100%; display: block; }
 @media (max-width: 768px) {
     .nav { display: none; /* 簡易的にスマホでメニュー非表示 */ }
     .hero { height: 60vh; }
+
 }
