@@ -1,0 +1,57 @@
+@charset "UTF-8";
+body { background: #050505; color: #fff; font-family: 'Teko', sans-serif; margin: 0; overflow-x: hidden; }
+h1, h2, h3 { margin: 0; text-transform: uppercase; line-height: 0.9; }
+
+/* ノイズ背景 */
+.bg-noise { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAA5OTkAAABMTExERERmZmYzMzMyMjJ423FnAAAACHRSTlMAMwA3M2YzM3OqTo8AAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAwSURBVDjLY2AYBaNgKLGhgIHBmoEBKIdsCgMDKi8VzCDGgwpQxQx2sAJcMdgFowAFAQAqvA217/l7tQAAAABJRU5ErkJggg=='); opacity: 0.05; pointer-events: none; z-index: 0; }
+
+header { position: fixed; width: 100%; padding: 20px; display: flex; justify-content: space-between; z-index: 100; mix-blend-mode: difference; }
+.logo { font-size: 2rem; font-weight: bold; color: #0ff; text-shadow: 0 0 10px #0ff; }
+.menu-btn { font-size: 2rem; color: #f0f; }
+
+/* ヒーロー（グリッチ） */
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1; }
+.glitch { font-size: 15vw; font-weight: bold; position: relative; color: #fff; text-shadow: 2px 2px #f0f, -2px -2px #0ff; }
+.sub { font-size: 2rem; letter-spacing: 0.5em; margin-top: 20px; color: #888; }
+
+/* 横スクロールコンテナ */
+.scroll-container-wrapper { width: 100%; height: 100vh; overflow: hidden; } /* ここはJSでpin留めされる */
+.scroll-container { display: flex; flex-wrap: nowrap; height: 100%; width: 500%; /* パネル枚数分 */ }
+.panel { width: 100vw; height: 100%; display: flex; justify-content: center; align-items: center; border-right: 1px solid rgba(255,255,255,0.1); position: relative; }
+
+/* パネル装飾 */
+.about { background: #111; }
+.about .content { font-size: 3rem; transform: skewX(-10deg); border: 2px solid #fff; padding: 50px; }
+
+.member { position: relative; }
+.member::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(0,0,0,0.8), transparent); z-index: 1; }
+.member.red { background: #200; }
+.member.purple { background: #202; }
+.member.green { background: #020; }
+
+.card { position: relative; z-index: 2; text-align: center; transform: skewX(-10deg); transition: 0.3s; }
+.card:hover { transform: skewX(-10deg) scale(1.1); }
+.card-img { width: 300px; height: 400px; background-size: cover; border: 2px solid #fff; margin-bottom: 20px; box-shadow: 10px 10px 0 #0ff; }
+.card h3 { font-size: 5rem; color: #fff; -webkit-text-stroke: 1px #000; text-shadow: 5px 5px 0 #f0f; }
+.card p { font-size: 2rem; background: #fff; color: #000; display: inline-block; padding: 0 10px; }
+
+/* スポンサー */
+.sponsors { background: #000; flex-direction: column; }
+.sponsors h2 { font-size: 5rem; margin-bottom: 50px; color: #ffff00; }
+.sponsor-list { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; width: 80%; }
+.box { width: 200px; height: 100px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #555; }
+
+/* ニュース（斜め） */
+.section-skew { transform: skewY(-5deg); background: #111; padding: 150px 0; margin-top: -50px; position: relative; z-index: 2; border-top: 5px solid #0ff; border-bottom: 5px solid #f0f; }
+.inner { transform: skewY(5deg); max-width: 800px; margin: 0 auto; } /* 中身は戻す */
+.news-item { border-bottom: 1px solid #333; padding: 20px; display: flex; align-items: center; transition: 0.2s; }
+.news-item:hover { background: #222; padding-left: 40px; }
+.news-item .date { color: #0ff; margin-right: 20px; font-size: 1.5rem; }
+.news-item .title { font-size: 2rem; }
+
+.join-us { padding: 200px 0; text-align: center; background: #000; }
+.join-us h2 { font-size: 6rem; margin-bottom: 40px; color: #fff; }
+.btn-glitch { display: inline-block; font-size: 3rem; color: #000; background: #0ff; padding: 20px 100px; font-weight: bold; box-shadow: 10px 10px 0 #f0f; transition: 0.2s; }
+.btn-glitch:hover { transform: translate(5px, 5px); box-shadow: 0 0 0 #f0f; }
+
+footer { padding: 50px; text-align: center; background: #000; border-top: 1px solid #333; }
