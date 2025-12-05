@@ -80,6 +80,7 @@ img { width: 100%; display: block; }
   position: absolute;
   inset: 0;
   z-index: 1;
+}
 
 /* ヒーロー文字（動画より上） */
 .hero-content {
