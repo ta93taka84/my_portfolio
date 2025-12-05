@@ -23,26 +23,28 @@
   </header>
 
   <section class="hero">
-    <div class="hero-media" aria-hidden="true">
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="assets/hero-poster.jpg"
-      >
-        <source src="assets/hero-bg.mp4" type="video/mp4" />
-      </video>
-      <div class="hero-overlay"></div>
-    </div>
+  <!-- 背景動画（装飾） -->
+  <div class="hero-media" aria-hidden="true">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/hero-poster.jpg"
+    >
+      <source src="assets/hero-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
 
-    <div class="hero-content js-hero-anim">
-      <h1>WEB CODING<br>PORTFOLIO.</h1>
-      <p>Design to Code with precision and creativity.</p>
-    </div>
-  </section>
+  <!-- 文字要素（動画より上） -->
+  <div class="hero-content js-hero-anim">
+    <h1>WEB CODING<br />PORTFOLIO.</h1>
+    <p>Design to Code with precision and creativity.</p>
+  </div>
+</section>
 
   <main>
     <section id="work" class="section work-section">
