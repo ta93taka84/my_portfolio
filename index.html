@@ -3,118 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio | Web Coder</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Takumi Takahashi | Web Coder / Frontend</title>
+
+  <meta name="description" content="アパレルEC/LP運用の現場で、設計→実装→計測→改善まで。壊れないコーディングと量産体制づくりで成果に貢献します。" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- OGP -->
+  <meta property="og:title" content="Takumi Takahashi | Web Coder / Frontend" />
+  <meta property="og:description" content="設計→実装→計測→改善。運用で成果を積むためのフロント実装。" />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="assets/og.jpg" /> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <header class="header">
     <div class="header-inner">
-      <div class="logo">TAKUMI TAKAHASHI</div>
-      <nav class="nav">
+      <div class="logo" aria-label="サイトロゴ">TAKUMI TAKAHASHI</div>
+      <nav class="nav" aria-label="主要ナビゲーション">
         <ul>
-          <li><a href="#about">ABOUT</a></li>
           <li><a href="#work">WORK</a></li>
+          <li><a href="#strength">STRENGTH</a></li>
+          <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-  <!-- 背景動画（装飾） -->
-  <div class="hero-media" aria-hidden="true">
-    <video
-      class="hero-video"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster="assets/hero-poster.png"
-    >
-      <source src="assets/hero-bg.mp4" type="video/mp4" />
-    </video>
-    <div class="hero-overlay"></div>
-  </div>
+  <section class="hero" aria-label="ヒーロー">
+    <!-- 背景動画（装飾） -->
+    <div class="hero-media" aria-hidden="true">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="assets/hero-poster.jpg"
+      >
+        <source src="assets/hero-bg.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
 
-  <!-- 文字要素（動画より上） -->
-  <div class="hero-content js-hero-anim">
-    <h1>WEB CODING<br />PORTFOLIO.</h1>
-    <p>Design to Code with precision and creativity.</p>
-  </div>
-</section>
+    <!-- 文字要素（動画より上） -->
+    <div class="hero-content js-hero-anim">
+      <h1>WEB CODING<br />PORTFOLIO.</h1>
+      <p class="hero-lead">Design to Code. Operate to Improve.</p>
+      <ul class="hero-pills" aria-label="得意領域">
+        <li class="pill">EC / LP Operations</li>
+        <li class="pill">Template &amp; Docs</li>
+        <li class="pill">Analytics → Improve</li>
+        <li class="pill">WebView Troubleshooting</li>
+      </ul>
+    </div>
+  </section>
 
   <main>
-    <section id="work" class="section work-section">
+
+    <section id="work" class="section work-section" aria-label="実績">
       <div class="container">
         <h2 class="section-title js-title-anim">SELECTED WORK</h2>
 
         <div class="work-grid">
           <a href="004/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" alt="Hospital LP" />
+              <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop" alt="病院サイトのLPサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">Medical / Corporate</span>
               <h3>青空総合病院</h3>
-              <p>総合病院の公式HP。清潔感のある配色と信頼感を与える余白設計。</p>
+              <p>清潔感と信頼感を軸に、余白設計と読みやすさを重視。運用更新も想定した堅牢なレイアウト。</p>
             </div>
           </a>
 
           <a href="005/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=800&auto=format&fit=crop" alt="Salon LP" />
+              <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=800&auto=format&fit=crop" alt="美容室サイトのLPサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">Beauty / Mode</span>
               <h3>MONOCHROME</h3>
-              <p>美容室のブランディングHP。モノトーン基調の鋭いアニメーション。</p>
+              <p>モノトーン基調のブランディング。主張しすぎない動きで世界観を保ちつつ、軽量さも担保。</p>
             </div>
           </a>
 
           <a href="006/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" alt="eSports LP" />
+              <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" alt="eスポーツチームサイトのLPサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">e-Sports / Entertainment</span>
               <h3>VOLTAGE</h3>
-              <p>プロゲーミングチームHP。横スクロール(Pinning)を取り入れた没入演出。</p>
+              <p>横スクロール（Pinning）で没入演出。動きが多い構成でもUXを崩さない実装を意識。</p>
             </div>
           </a>
 
           <a href="002/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop" alt="Fashion Snap LP" />
+              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop" alt="ファッション特集LPのサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">Fashion / Snap</span>
               <h3>TOKYO REAL STREET</h3>
-              <p>ストリートスナップ特集LP。スクロール連動アニメーション実装。</p>
+              <p>特集LPの読みやすい情報設計＋スクロール連動演出。テンポと視認性のバランスに配慮。</p>
             </div>
           </a>
 
           <a href="001/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800&auto=format&fit=crop" alt="Holiday Gift LP" />
+              <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?q=80&w=800&auto=format&fit=crop" alt="ギフト特集LPのサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">Campaign / Luxury</span>
               <h3>HOLIDAY GIFT GUIDE</h3>
-              <p>クリスマスギフト特集LP。高級感のある配色と演出。</p>
+              <p>高級感のある配色と控えめな動き。CTAまで迷わせない導線設計を意識。</p>
             </div>
           </a>
 
           <a href="003/index.html" class="work-card js-work-card">
             <div class="work-thumb">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop" alt="Roomwear LP" />
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop" alt="ルームウェア特集LPのサムネイル" />
             </div>
             <div class="work-info">
               <span class="work-cat">Lifestyle / Relax</span>
               <h3>Cozy Time Together</h3>
-              <p>ルームウェア特集LP。穏やかな動きとフェードイン演出。</p>
+              <p>穏やかな動きとフェードで雰囲気を演出。画像主体でも軽さを損なわない実装を意識。</p>
             </div>
           </a>
         </div>
@@ -122,26 +142,102 @@
       </div>
     </section>
 
-    <section id="about" class="section about-section">
+    <section id="strength" class="section strength-section" aria-label="強み">
       <div class="container">
-        <h2 class="section-title">ABOUT ME</h2>
-        <p class="about-text">
-          本ページをご覧いただきありがとうございます。<br>
-          普段はECサイトのディレクションやコーディングをメイン業務としております。<br>
-          副業としてWebサイトのコーディングを行っています。<br>
-          HTML/CSS/JavaScriptを用いた、動きのあるモダンなサイト制作が得意です。<br>
-          デザインの意図を汲み取り、ユーザー体験を損なわない実装を心がけています。<br>
-          最近は生成AIを活用した業務の効率化・改善にも注力しています。<br><br>
-          日本在住、1児の父親として日々奮闘中です。<br>
-          座右の銘は「デジタル時代だからこそ、リアルを真摯に」。
-          ご依頼・ご相談等ございましたら、<a href="#contact">CONTACT</a>までお気軽にご連絡ください。
-        </p>
+        <h2 class="section-title js-title-anim">STRENGTH</h2>
+
+        <div class="strength-grid">
+          <article class="strength-card js-strength-card">
+            <span class="strength-cat">Operation-minded</span>
+            <h3>運用前提の実装設計</h3>
+            <p>
+              差し替え・更新・量産を前提に、命名規則・再利用単位・例外条件を先に固定。
+              「担当が変わっても崩れない」構造で、改修コストとミスを抑えます。
+            </p>
+          </article>
+
+          <article class="strength-card js-strength-card">
+            <span class="strength-cat">Analytics → Improve</span>
+            <h3>計測から改善までを回す</h3>
+            <p>
+              GA4やダッシュボードで「見る順番」を設計し、週次で意思決定できる状態へ。
+              速度（Web Vitals）と体験（導線）を両立させる改善提案が得意です。
+            </p>
+          </article>
+
+          <article class="strength-card js-strength-card">
+            <span class="strength-cat">Systemize</span>
+            <h3>仕組み化とAI効率化</h3>
+            <p>
+              構成書、更新マニュアル（スクショ中心）、チェックリストを整備し、属人化を減らします。
+              生成AIも活用して「速いのに品質が落ちない」制作体制を作ります。
+            </p>
+          </article>
+        </div>
+
+        <div class="strength-tools" aria-label="対応領域">
+          <span class="tool">HTML / CSS / JavaScript</span>
+          <span class="tool">GA4 / Looker Studio</span>
+          <span class="tool">WebView / iOS (WKWebView)</span>
+          <span class="tool">Performance (Lighthouse / PSI)</span>
+          <span class="tool">Docs / Guidelines</span>
+        </div>
       </div>
     </section>
+
+    <section id="about" class="section about-section" aria-label="自己紹介">
+      <div class="container">
+        <h2 class="section-title js-title-anim">ABOUT ME</h2>
+
+        <div class="about-box js-about-anim">
+          <p class="about-text">
+            本ページをご覧いただきありがとうございます。<br />
+            普段はアパレルECの受託運用の現場で、ディレクションとコーディングを軸に<br />
+            「作って終わり」ではなく、運用・改善まで回る実装に取り組んでいます。<br /><br />
+
+            <span class="about-strong">強みは3つです。</span>
+          </p>
+
+          <ul class="about-list">
+            <li><b>運用前提の設計</b>：更新・差し替え・量産に強い構造とルールで、品質を安定化。</li>
+            <li><b>計測→改善</b>：GA4/レポートを起点に、週次で打ち手が回る状態を作る。</li>
+            <li><b>現場の詰まりどころ対応</b>：WebViewや端末差分などの“落とし穴”を切り分けて前進させる。</li>
+          </ul>
+
+          <p class="about-text">
+            HTML/CSS/JavaScriptを用いた、動きのあるモダンなサイト制作が得意です。<br />
+            デザインの意図を汲み取り、ユーザー体験を損なわない実装を心がけています。<br />
+            最近は生成AIを活用した業務の効率化・改善にも注力しています。<br /><br />
+
+            日本在住、1児の父親として日々奮闘中です。<br />
+            座右の銘は「デジタル時代だからこそ、リアルを真摯に」。<br />
+            ご依頼・ご相談等ございましたら、<a class="inline-link" href="#contact">CONTACT</a>までお気軽にご連絡ください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section" aria-label="連絡先">
+      <div class="container">
+        <h2 class="section-title js-title-anim">CONTACT</h2>
+
+        <div class="contact-box js-contact-anim">
+          <p class="contact-lead">
+            LP制作 / 量産テンプレ化 / パフォーマンス改善 / WebViewの切り分けなど、実務寄りの相談歓迎です。
+          </p>
+
+          <a class="contact-btn" href="mailto:ta93.taka84@gmail.com?subject=Portfolio%20Inquiry&body=%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0A%E7%B4%8D%E6%9C%9F%EF%BC%9A%0A%E4%BA%88%E7%AE%97%EF%BC%9A%0A">
+            Email: ta93.taka84@gmail.com
+          </a>
+
+          <p class="contact-note">※ 具体的な要件が未整理でも大丈夫です。選択肢を出しながら一緒に形にします。</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer id="contact" class="footer">
-    <p>Contact: ta93.taka84@gmail.com</p>
+  <footer class="footer">
     <p>&copy; 2025 TAKUMI TAKAHASHI.</p>
   </footer>
 
